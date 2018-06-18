@@ -17,6 +17,7 @@ body{
     transition-timing-function: linear;
   }
   
+  /*your collected notes per second will here styled here*/
   #currentTotal {
     width:250px;
     height:50px;
@@ -36,6 +37,7 @@ body{
       background-color: rgb(255,165,0, .7);
   }
   
+  /*here are my button stylings!*/
   .button {
     width:250px;
     height:20px;

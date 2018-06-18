@@ -3,32 +3,32 @@
 $(document).ready(function () {
     
 
-var data = {
+var data = {  //setting up some data to get the record to spin
     totalRevs:360, 
     totalCurrent:0, 
-    totalNPS: 0
+    totalNPS: 0 //"numbers per second"
   };
   
-  setInterval(goGo,1000);
-  //sets off the goGo function every 1 second (1000 milliseconds)
+  setInterval(spinRecord,1000);
+  //sets off the spinRecord function every 1 second (1000 milliseconds)
   
-  function goGo() {
-    data.totalRevs += data.totalNPS;
+  function spinRecord() { //This is the function that causes the record to spin
+    data.totalRevs += data.totalNPS;  
     data.totalCurrent += data.totalNPS;
-    $("#record").css({ 'transform': 'rotate(' + data.totalRevs + 'deg)'});
+    $("#record").css({ 'transform': 'rotate(' + data.totalRevs + 'deg)'}); //CSS to spin the record pic
     updateReport();
   }
   
-  function updateReport() {
-    $("#currentTotal").text(Math.floor(data.totalCurrent));
+  function updateReport() { //tells you in live time how many 'points' youve got
+    $("#currentTotal").text(Math.floor(data.totalCurrent)); //target the feld for points and add the new points
     $("#nps").text((data.totalNPS/70.4).toFixed(3));
   }
   
   
-  $("#record").click(function (){
-    data.totalRevs ++;
-    data.totalCurrent ++;
-    updateReport();
+  $("#record").click(function (){ //clicks the record
+    data.totalRevs ++; //counter goes up one every click
+    data.totalCurrent ++; //counter goes up one every click
+    updateReport(); //feed into your current points
   })
   
   $(".button").click(function (){ 
@@ -43,5 +43,3 @@ var data = {
   })
 });
   
-  //BUG --> restarts and doesnt work past original 4....???
-  //the fourth item doesnt reappear when originally bought

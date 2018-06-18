@@ -1,0 +1,47 @@
+body{
+    background-image: URL("img/purpleMusic.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#record {
+    width:250px;
+    height:250px;
+    border-radius:150px;
+  }
+  
+  img {
+    transition: all 3s;
+    transition-timing-function: linear;
+  }
+  
+  #currentTotal {
+    width:250px;
+    height:50px;
+    border:1px solid black;
+    text-align: center;
+    font-size: 48px;
+    background-color:yellow;
+  }
+
+  #maker-container{
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      width:325px;
+      height:660px;
+      border-radius: 5em;
+      background-color: rgb(255,165,0, .7);
+  }
+  
+  .button {
+    width:250px;
+    height:20px;
+    border:1px solid black;
+    border-radius:25px;
+    text-align: center;
+    cursor:pointer;
+    background-color:yellow;
+  }
